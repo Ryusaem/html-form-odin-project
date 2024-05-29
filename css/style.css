@@ -138,11 +138,12 @@ body {
   border: 2px solid red;
 }
 
-/* .container-right input:invalid + span::after {
+.container-right input:invalid + span::before {
   position: absolute;
   content: "X";
+  content: " (" attr(data-help) ")";
   color: red;
-} */
+}
 
 /* --- SPAN --- */
 
