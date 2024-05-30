@@ -85,7 +85,8 @@
 
                 <div class="form-row">
                     <!-- <label for="user-password">PASSWORD</label> -->
-                    <input type="password" id="user-password" name="user-password" placeholder="PASSWORD *" required>
+                    <input type="password" id="user-password" name="user-password" placeholder="PASSWORD *"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$" required>
                     <span class="span-user-password" data-name="PASSWORD"></span>
 
                 </div>
@@ -93,7 +94,7 @@
                 <div class="form-row">
                     <!-- <label for="user-password-confirm">CONFIRM PASSWORD</label> -->
                     <input type="password" id="user-password-confirm" name="user-password-confirm"
-                        placeholder="CONFIRM PASSWORD *" required>
+                        placeholder="CONFIRM PASSWORD *" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$" required>
                     <span class="span-user-password-confirm" data-name="CONFIRM PASSWORD"></span>
 
                 </div>

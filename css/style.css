@@ -50,8 +50,8 @@ body {
 }
 
 .container-left img.sidebar {
-  z-index: 1;
   position: relative;
+  z-index: 1;
   transform: translateY(-50%);
   top: 50%;
 
@@ -62,10 +62,9 @@ body {
 }
 
 .container-left p {
-  /* position: absolute; */
-  bottom: 0;
-  z-index: 1;
-  left: 40px;
+  position: relative;
+  /* bottom: 10px; */
+  /* left: 40px; */
 
   font-size: 0.8rem;
   color: aliceblue;
@@ -76,10 +75,14 @@ body {
 /* --- RIGHT SIDE --- */
 
 .container-right {
-  width: 60%;
-  background-color: var(--color-base-bg);
   display: flex;
   flex-direction: column;
+
+  width: 60%;
+  height: 100vh;
+
+  background-color: var(--color-base-bg);
+
   padding: 70px 50px;
 }
 
