@@ -225,6 +225,11 @@ a:link {
   margin-bottom: 25px;
 }
 
+.container-right .btn:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 .container-right input:placeholder-shown {
   background-color: transparent;
   border: transparent;
