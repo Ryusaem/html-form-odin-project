@@ -37,8 +37,8 @@
             <img src="assets/images/image-sidebar.png" alt="image-sidebar-odin" class="sidebar">
 
             <p>Photo by
-                <a href="https://unsplash.com/@phaelnogueira">xxx</a> on
-                <a href="https://unsplash.com/">Unsplash</a>
+                <a href="https://unsplash.com/@phaelnogueira" target="_blank">Raphael Nogueira</a> on
+                <a href="https://unsplash.com/" target="_blank">Unsplash</a>
             </p>
         </div>
 
@@ -95,13 +95,16 @@
                     <!-- <label for="user-password-confirm">CONFIRM PASSWORD</label> -->
                     <input type="password" id="user-password-confirm" name="user-password-confirm"
                         placeholder="CONFIRM PASSWORD *" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$" required>
-                    <span class="span-user-password-confirm" data-name="CONFIRM PASSWORD"></span>
+                    <span class="span-user-password-confirm" data-name="CONFIRM PASSWORD"
+                        data-help="Passwords do not match"></span>
 
                 </div>
 
                 <div class="form-row-bottom">
                     <button type="submit" class="btn">Create Account</button>
-                    <p>Already have an account? Log in</p>
+                    <p>Already have an account?
+                        <a href="#" target="_blank">Log in</a>
+                    </p>
                 </div>
             </form>
         </div>

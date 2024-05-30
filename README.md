@@ -67,6 +67,18 @@ Total:
 
 [The Odin Project](https://www.theodinproject.com/) - Formidable resources to make you learn by "doing" awesome project. Highly recommend it.
 
+[Sitepoint - regex](https://www.sitepoint.com/learn-regex/) - Learn the basic of regex (+email pattern regex)
+
+[Sitepoint - Practical example regex](https://www.sitepoint.com/demystifying-regex-with-practical-examples/#matching-password) - Learn advance feature and practical example on how to use regex (+password pattern regx)
+
+[Regex101](https://regex101.com/) - To train on regex.
+
+[do’s and don’ts for form validation UX (X thread)](https://threadreaderapp.com/thread/1400388896136040454.html) - Very clear and practical on how to build forms.
+
+[Silocreativo - CSS & UX forms](https://www.silocreativo.com/en/css-rescue-improving-ux-forms/) - Help to understand and build beautiful form
+
+[GitHub Abdul Khalid](https://0xabdulkhalid.github.io/basket-sign-up/) - Student from whom I got inspired on the design of the form
+
 ## Author -
 
 - Github - [@Ryusaem](https://github.com/Ryusaem) -

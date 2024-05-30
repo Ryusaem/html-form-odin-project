@@ -4,27 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation Test</title>
+    <title>Password Validation</title>
     <style>
-        .form-row {
-            position: relative;
-            margin-bottom: 20px;
+        .valid {
+            color: green;
         }
 
-        .form-row input:invalid+span::after {
-            content: " (" attr(data-help) ")";
+        .invalid {
             color: red;
-            margin-left: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div class="form-row">
-        <input type="text" id="user-input" name="user-input" placeholder="Enter text"
-            data-help="Please enter valid text" pattern="[A-Za-z]+" required>
-        <span></span>
-    </div>
+    <form id="password-form">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div id="password-strength"></div>
+        <div id="validation-message"></div>
+    </form>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const passwordStrength = document.getElementById('password-strength');
+        const validationMessage = document.getElementById('validation-message');
+
+        const criteria = {
+            length: { regex: /.{8,}/, message: "At least 8 characters long" },
+            uppercase: { regex: /[A-Z]/, message: "Contains an uppercase letter" },
+            number: { regex: /\d/, message: "Contains a number" },
+            special: { regex: /[!@#$%^&*]/, message: "Contains a special character" }
+        };
+
+        const validatePassword = () => {
+            const value = passwordInput.value;
+            let isValid = true;
+            validationMessage.innerHTML = '';
+            passwordStrength.innerHTML = '';
+
+            for (const key in criteria) {
+                if (criteria[key].regex.test(value)) {
+                    validationMessage.innerHTML += `<p class="valid">${criteria[key].message}</p>`;
+                } else {
+                    validationMessage.innerHTML += `<p class="invalid">${criteria[key].message}</p>`;
+                    isValid = false;
+                }
+            }
+
+            if (isValid) {
+                passwordStrength.innerHTML = 'Strong password';
+                passwordStrength.classList.add('valid');
+                passwordStrength.classList.remove('invalid');
+            } else {
+                passwordStrength.innerHTML = 'Weak password';
+                passwordStrength.classList.add('invalid');
+                passwordStrength.classList.remove('valid');
+            }
+        };
+
+        passwordInput.addEventListener('input', validatePassword);
+    </script>
 </body>
 
 </html>
