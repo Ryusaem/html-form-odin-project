@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 }
 
-/* --- LEFT SIDE --- */
+/* --- LEFT SIDE (IMAGE) --- */
 
 .container-left {
   display: flex;
@@ -71,6 +71,8 @@ body {
   color: aliceblue;
 }
 
+/* ----   ---- */
+
 /* --- RIGHT SIDE --- */
 
 .container-right {
@@ -94,11 +96,15 @@ body {
 
 /* --- FORM --- */
 
+:focus {
+  outline: none;
+}
+
 .container-right form {
   flex: 1 1 80%;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px 30px;
 }
 
 .form-row {
@@ -107,26 +113,26 @@ body {
 
 .container-right input {
   appearance: none;
+
   width: 250px;
   padding: 10px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
+  font-size: 1.1rem;
+
   background-color: var(--color-base-bg);
   color: white;
-  font-size: 1.1rem;
 }
 
 .container-right input::placeholder {
-  color: var(--color-base-text);
   font-size: 1rem;
   letter-spacing: 1px;
+
+  color: var(--color-base-text);
 }
 
-.container-right input:valid:focus,
-.container-right input:invalid:focus {
-  outline: none;
-}
+/* --- VALID --- */
 
 .container-right input:valid,
 .container-right input:valid:focus {
@@ -134,25 +140,30 @@ body {
   background-color: rgb(19, 51, 11);
 }
 
-.container-right input:invalid:focus {
-  border: 2px solid red;
+.container-right input:valid:focus {
+  background-color: transparent;
 }
 
-.container-right input:invalid + span::before {
-  position: absolute;
-  content: "X";
-  content: " (" attr(data-help) ")";
-  color: red;
+/* --- INVALID --- */
+
+.container-right input:invalid:focus,
+.container-right input:invalid {
+  border: 2px solid #b92326;
+  background-color: rgba(185, 35, 38, 0.25);
+}
+
+.container-right input:focus:invalid {
+  background-color: transparent;
 }
 
 /* --- SPAN --- */
-
+.container-right input:invalid:not(:placeholder-shown) + span::after,
 .container-right input:valid + span::after,
 .container-right input:focus + span::after {
   position: absolute;
   top: -15px;
   left: 10px;
-  content: "";
+  content: attr(data-name);
 
   color: white;
   background-color: darkred;
@@ -163,36 +174,6 @@ body {
   border-radius: 3px;
 }
 
-.container-right input:valid + .span-user-first-name::after,
-.container-right input:focus + .span-user-first-name::after {
-  content: "FIRST NAME";
-}
-
-.container-right input:valid + .span-user-last-name::after,
-.container-right input:focus + .span-user-last-name::after {
-  content: "LAST NAME";
-}
-
-.container-right input:valid + .span-user-email::after,
-.container-right input:focus + .span-user-email::after {
-  content: "EMAIL";
-}
-
-.container-right input:valid + .span-user-phone::after,
-.container-right input:focus + .span-user-phone::after {
-  content: "PHONE";
-}
-
-.container-right input:valid + .span-user-password::after,
-.container-right input:focus + .span-user-password::after {
-  content: "PASSWORD";
-}
-
-.container-right input:valid + .span-user-password-confirm::after,
-.container-right input:focus + .span-user-password-confirm::after {
-  content: "CONFIRM PASSWORD";
-}
-
 /* --- VALIDATION (VALID + FOCUS) --- */
 
 .container-right input:valid + span::after,
@@ -200,10 +181,26 @@ body {
   background-color: green;
 }
 
+/* --- VALIDATION (INVALID + FOCUS) --- */
+
+.container-right input:invalid:not(:placeholder-shown) + span::before {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  content: attr(data-help);
+  width: 500px;
+  min-width: 100px; /* adjust as needed */
+  max-width: 500px;
+  white-space: normal;
+
+  /* font-size: 0.8rem; */
+  color: red;
+}
+
 /* --- PLACEHOLDER --- */
 
 .container-right input:focus::placeholder {
-  color: var(--color-base-bg);
+  color: transparent;
 }
 
 /* --- BUTTON --- */
@@ -218,6 +215,10 @@ body {
   border: none;
 }
 
+.container-right input:placeholder-shown {
+  background-color: transparent;
+  border: transparent;
+}
 /* --- FOOTER --- */
 
 .footer {

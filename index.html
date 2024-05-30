@@ -52,38 +52,41 @@
             <form action="#" method="post">
                 <div class="form-row">
                     <!-- <label for="user-first-name">FIRST NAME</label> -->
-                    <input type="text" id="user-first-name" name="user-first-name" placeholder="FIRST NAME *" required
-                        minlength="3">
-                    <span class="span-user-first-name"></span>
+                    <input type="text" id="user-first-name" name="user-first-name" placeholder="FIRST NAME *"
+                        maxlength="245" data-help="enter" required>
+                    <span class="span-user-first-name" data-name="FIRST NAME"></span>
 
                 </div>
 
                 <div class="form-row">
                     <!-- <label for="user-last-name">LAST NAME</label> -->
-                    <input type="text" id="user-last-name" name="user-last-name" placeholder="LAST NAME *" required>
-                    <span class="span-user-last-name"></span>
+                    <input type="text" id="user-last-name" name="user-last-name" placeholder="LAST NAME *"
+                        maxlength="245" required>
+                    <span class="span-user-last-name" data-name="LAST NAME"></span>
                 </div>
 
                 <div class="form-row">
                     <!-- <label for="user-email">EMAIL</label> -->
                     <input type="email" id="user-email" name="user-email" placeholder="EMAIL *"
-                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" data-help="Format email@email.com"
-                        required>
-                    <span class="span-user-email"></span>
+                        pattern="^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$"
+                        data-help="Please enter a valid email" required>
+                    <span class="span-user-email" data-help="Format: email@email.com" data-name="EMAIL"></span>
 
                 </div>
 
                 <div class="form-row">
                     <!-- <label for="user-phone">PHONE NUMBER</label> -->
-                    <input type="tel" id="user-phone" name="user-phone" placeholder="PHONE NUMBER *" required>
-                    <span class="span-user-phone"></span>
+                    <input type="tel" id="user-phone" name="user-phone" placeholder="PHONE NUMBER *"
+                        pattern="((\d{2}-){4}\d{2}|\d{10})" required>
+                    <span class="span-user-phone" data-name="PHONE NUMBER"
+                        data-help="e.g: 06-60-70-80-90 or 0660708090"></span>
 
                 </div>
 
                 <div class="form-row">
                     <!-- <label for="user-password">PASSWORD</label> -->
                     <input type="password" id="user-password" name="user-password" placeholder="PASSWORD *" required>
-                    <span class="span-user-password"></span>
+                    <span class="span-user-password" data-name="PASSWORD"></span>
 
                 </div>
 
@@ -91,7 +94,7 @@
                     <!-- <label for="user-password-confirm">CONFIRM PASSWORD</label> -->
                     <input type="password" id="user-password-confirm" name="user-password-confirm"
                         placeholder="CONFIRM PASSWORD *" required>
-                    <span class="span-user-password-confirm"></span>
+                    <span class="span-user-password-confirm" data-name="CONFIRM PASSWORD"></span>
 
                 </div>
 

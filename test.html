@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Test</title>
+    <style>
+        .form-row {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-row input:invalid+span::after {
+            content: " (" attr(data-help) ")";
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-row">
+        <input type="text" id="user-input" name="user-input" placeholder="Enter text"
+            data-help="Please enter valid text" pattern="[A-Za-z]+" required>
+        <span></span>
+    </div>
+</body>
+
+</html>
