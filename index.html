@@ -86,8 +86,18 @@
                 <div class="form-row">
                     <!-- <label for="user-password">PASSWORD</label> -->
                     <input type="password" id="user-password" name="user-password" placeholder="PASSWORD *"
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$" required>
+                        pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,12}$" required>
+
                     <span class="span-user-password" data-name="PASSWORD"></span>
+
+                    <div id="password-popup" class="password-popup">
+                        <p id="length" class="invalid">
+                            8 characters minimum</p>
+                        <!-- <p id="lowercase" class="invalid">One lowercase letter</p> -->
+                        <p id="uppercase" class="invalid">One uppercase letter</p>
+                        <p id="number" class="invalid">One number</p>
+                        <p id="special" class="invalid">One special character !@#$%^&*</p>
+                    </div>
 
                 </div>
 

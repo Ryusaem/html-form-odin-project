@@ -79,6 +79,9 @@ Total:
 
 [GitHub Abdul Khalid](https://0xabdulkhalid.github.io/basket-sign-up/) - Student from whom I got inspired on the design of the form
 
+[GitHub Aroan Sign Up Form Repository](https://github.com/aroan-v/Sign-up-Form)
+[Live Preview Aroan Sign Up Form](https://aroan-v.github.io/Sign-up-Form/) - Very interesting project espcially the password pop up
+
 ## Author -
 
 - Github - [@Ryusaem](https://github.com/Ryusaem) -

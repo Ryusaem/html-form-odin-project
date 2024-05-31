@@ -223,6 +223,7 @@ a:link {
   border: none;
   background-color: greenyellow;
   margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 .container-right .btn:hover {
@@ -234,6 +235,68 @@ a:link {
   background-color: transparent;
   border: transparent;
 }
+
+/* --- TEST --- */
+
+.password-popup {
+  display: none;
+  position: absolute;
+  /* bottom: 0px;
+  right: -245px;
+  z-index: 1; */
+
+  /* display: flex; */
+  flex-wrap: wrap;
+  gap: 15px 10px;
+
+  /* border: 1px solid #ddd; */
+  width: 400px;
+  font-size: 0.7rem;
+  /* border-radius: 8px; */
+  /* padding: 10px; */
+
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: red;
+}
+
+.container-right #user-password:focus ~ .password-popup {
+  display: flex;
+}
+
+.password-popup > p {
+  --content: "\2715"; /* "X" */
+  --content-color: red;
+  --content-color: rgb(153, 255, 0);
+
+  /* border: 1px solid red; */
+  /* width: 130px; */
+  width: 35%;
+}
+
+.password-popup > p#special {
+  width: 50%;
+}
+
+.valid {
+  color: white;
+}
+
+.invalid {
+  color: pink;
+}
+
+.password-popup > p::before {
+  content: var(--content);
+  color: var(--content-color);
+
+  font-weight: bold;
+  margin-right: 5px;
+  /* background-color: darkred; */
+  /* padding: 2px 8px; */
+  /* border-radius: 3px; */
+}
+
 /* --- FOOTER --- */
 
 .footer {
