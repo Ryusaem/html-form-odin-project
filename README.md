@@ -71,6 +71,10 @@ Total:
 
 [Sitepoint - Practical example regex](https://www.sitepoint.com/demystifying-regex-with-practical-examples/#matching-password) - Learn advance feature and practical example on how to use regex (+password pattern regx)
 
+[Password Creation (medium article)](https://medium.com/kiipco/password-creation-3-ways-to-make-it-accessible-bc8f2b53b7ee) - Help me to come up with a design on how to place my password popup
+
+![Screenshot password popup](/assets/images/password-popup-design.png)
+
 [Regex101](https://regex101.com/) - To train on regex.
 
 [do’s and don’ts for form validation UX (X thread)](https://threadreaderapp.com/thread/1400388896136040454.html) - Very clear and practical on how to build forms.

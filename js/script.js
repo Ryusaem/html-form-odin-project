@@ -7,6 +7,19 @@ const uppercaseCriteria = document.querySelector("#uppercase");
 const numberCriteria = document.querySelector("#number");
 const specialCriteria = document.querySelector("#special");
 
+const showHide = document.querySelector(".show-hide");
+
+// Show/Hide password
+showHide.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showHide.textContent = "Hide";
+  } else {
+    passwordInput.type = "password";
+    showHide.textContent = "Show";
+  }
+});
+
 // criteria for password (regex)
 const criteria = {
   length: /^.{8,}$/,

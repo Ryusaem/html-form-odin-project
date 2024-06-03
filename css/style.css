@@ -230,6 +230,24 @@ a:link {
   color: gray;
   cursor: pointer;
 }
+.show-hide {
+  display: none;
+}
+
+#user-password:focus .show-hide {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-60%);
+
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-align: center;
+  background-color: rgba(69, 72, 68, 0.9);
+  /* width: 50px; */
+}
 
 .container-right input:placeholder-shown {
   background-color: transparent;
@@ -267,11 +285,21 @@ a:link {
 .password-popup > p {
   --content: "\2715"; /* "X" */
   --content-color: red;
-  --content-color: rgb(153, 255, 0);
 
   /* border: 1px solid red; */
   /* width: 130px; */
   width: 35%;
+}
+
+.password-popup > p::before {
+  content: var(--content);
+  color: var(--content-color);
+
+  font-weight: bold;
+  margin-right: 5px;
+  /* background-color: darkred; */
+  /* padding: 2px 8px; */
+  /* border-radius: 3px; */
 }
 
 .password-popup > p#special {
@@ -284,17 +312,6 @@ a:link {
 
 .invalid {
   color: pink;
-}
-
-.password-popup > p::before {
-  content: var(--content);
-  color: var(--content-color);
-
-  font-weight: bold;
-  margin-right: 5px;
-  /* background-color: darkred; */
-  /* padding: 2px 8px; */
-  /* border-radius: 3px; */
 }
 
 /* --- FOOTER --- */
